@@ -46,7 +46,7 @@ public class log extends AppCompatActivity implements View.OnClickListener {
                 phonelog.actionStart(log.this);
                 break;
             case R.id.log_log:
-                MainActivity.actionStart(log.this);
+                homepageActivity.actionStart(log.this);
                 break;
             default:
                 break;
