@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
-    android:background="#5F9EA0">
+    android:background="#48AEEF">
 
     <TextView
         android:id="@+id/title_text"
@@ -19,6 +19,19 @@
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:background="@mipmap/back"/>
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:id="@+id/queren_button"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible"
+        android:text="同意"
+        android:textSize="12sp"
+        android:textColor="#fff"
+        android:background="@drawable/tongyi"/>
 
 
 </RelativeLayout>

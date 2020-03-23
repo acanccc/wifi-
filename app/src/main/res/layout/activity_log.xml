@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <ImageView
         android:id="@+id/log_logo"
@@ -99,28 +100,66 @@
         android:text="短信登录"
         android:clickable="true"
       />
+
     <Button
         android:id="@+id/log_log"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@drawable/logbutton"
         android:text="登陆"
-        android:layout_below="@id/rememberpawd"
-        android:layout_marginTop="30dp"
+        android:layout_above="@id/registerText"
+        android:layout_marginTop="100dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:textSize="20sp"
         android:textColor="#fff"/>
+
     <TextView
         android:id="@+id/registerText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/log_log"
+        android:layout_above="@id/li_yinsi"
         android:layout_marginTop="10dp"
         android:text="新用户注册"
         android:layout_centerHorizontal="true"
         android:clickable="true"
 
         />
+
+    <LinearLayout
+        android:id="@+id/li_yinsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+   >
+
+        <CheckBox
+            android:id="@+id/gouxuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style = "@style/CheckBox"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 我已阅读并同意"
+            />
+        <TextView
+            android:id="@+id/yinsi"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《用户使用协议》"
+            android:textColor="#33a3dc"/>
+
+
+
+    </LinearLayout>
 
 </RelativeLayout>

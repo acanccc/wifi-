@@ -4,8 +4,13 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">#5B5C5C</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <style name="CheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+    <item name="android:button">@drawable/checkbox_style</item>
+    </style>
+
 
 </resources>
