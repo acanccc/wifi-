@@ -77,8 +77,16 @@ public class homepageActivity extends AppCompatActivity {
         fragment2 = new Fragment2();
         fragment3 = new Fragment3();
         fragments = new Fragment[]{fragment1,fragment2,fragment3};
-        lastfragment=1;
-        getSupportFragmentManager().beginTransaction().replace(R.id.mainview,fragment2).show(fragment2).commit();
+        Intent intent=getIntent();
+        lastfragment=intent.getIntExtra("index",1);
+        if(lastfragment==0){
+            getSupportFragmentManager().beginTransaction().replace(R.id.mainview,fragment1).show(fragment1).commit();
+        }else if(lastfragment==2){
+            getSupportFragmentManager().beginTransaction().replace(R.id.mainview,fragment3).show(fragment3).commit();
+        }else{
+            getSupportFragmentManager().beginTransaction().replace(R.id.mainview,fragment2).show(fragment2).commit();
+        }
+
         BottomNavigationView navView = findViewById(R.id.nav_view);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
@@ -97,9 +105,11 @@ public class homepageActivity extends AppCompatActivity {
 
 
     }
-    public static void actionStart(Context context){
+    public static void actionStart(Context context, int index){
         Intent intent=new Intent(context,homepageActivity.class);
+        intent.putExtra("index",index);
         context.startActivity(intent);
+
     }
 
 }

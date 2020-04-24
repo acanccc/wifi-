@@ -3,12 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment3">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="3333333333333_blank_fragment" />
+        app:menu="@menu/snavigation_view"
+        app:headerLayout="@layout/snavigation_view_header">
 
+    </android.support.design.widget.NavigationView>
 </FrameLayout>

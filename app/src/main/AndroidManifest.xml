@@ -3,18 +3,25 @@
     package="com.example.signon">
 
     <application
-        android:name="com.mob.MobApplication"
+        android:name="com.example.signon.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".mobwebview"></activity>
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".wanshanxinxi"></activity>
+        <activity android:name=".gerenxinxi" />
+        <activity android:name=".jiaruqunzhu" />
+        <activity android:name=".xinjianqunliao" />
+        <activity android:name=".signinpage" />
+        <activity android:name=".mobwebview" />
         <activity android:name=".yonghuxuzhi" />
         <activity
             android:name=".homepageActivity"
             android:label="@string/title_home"
+            android:launchMode="singleTask"
             android:theme="@style/AppTheme" />
         <activity android:name=".phonelog" />
         <activity android:name=".register" />
@@ -38,6 +45,16 @@
         <meta-data
             android:name="Mob-AppSecret"
             android:value="8efa79a352d90af306e339d9f2e0b4e4" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.myapplication.home_imformation"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -49,6 +66,7 @@
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 

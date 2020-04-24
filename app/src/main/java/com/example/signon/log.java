@@ -103,8 +103,8 @@ public class log extends AppCompatActivity implements View.OnClickListener {
                     SharedPreferences.Editor editor=getSharedPreferences("data",MODE_PRIVATE).edit();
                     editor.putInt("gouxuan",1);
                     editor.apply();
-                    homepageActivity.actionStart(log.this);
-
+                    homepageActivity.actionStart(log.this,1);
+                    finish();
                 }else {
 
                     AlertDialog.Builder dialog=new AlertDialog.Builder(log.this);
@@ -129,6 +129,7 @@ public class log extends AppCompatActivity implements View.OnClickListener {
                 break;
             case R.id.yinsi:
                 yonghuxuzhi.actionStart(log.this);
+                break;
             default:
                 break;
 

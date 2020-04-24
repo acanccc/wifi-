@@ -9,21 +9,74 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <Button
-            android:id="@+id/getWiFiinfo"
+        <LinearLayout
+            android:id="@+id/li_1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="获取WiFi信息"/>
-        <TextView
-            android:id="@+id/setWiFiinfo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_below="@id/getWiFiinfo"/>
+            android:layout_height="140dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/rectangle"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/qiandantext"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="30dp"
+                android:text="上课签到"
+                android:textSize="30sp"
+                android:textColor="#24A1DA"
+                android:gravity="center_vertical"
+
+                />
+
+        <ImageButton
+            android:id="@+id/btn_qiandao"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="50dp"
+            android:src="@drawable/qiandaobutton"
+            android:scaleType="fitCenter"
+            android:background="#fafafa"
+         />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/rectangle"
+            android:layout_below="@id/li_1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/faqitext"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="30dp"
+                android:text="发起签到"
+                android:textSize="30sp"
+                android:textColor="#24A1DA"
+                android:gravity="center_vertical"
+
+                />
+
+            <ImageButton
+                android:id="@+id/btn_faqi"
+                android:layout_width="60dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="50dp"
+                android:src="@drawable/qiandaobutton"
+                android:scaleType="fitCenter"
+                android:background="#fafafa"
+                />
+
+        </LinearLayout>
+
     </RelativeLayout>
 
 </FrameLayout>

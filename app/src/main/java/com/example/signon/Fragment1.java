@@ -3,7 +3,9 @@ package com.example.signon;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
@@ -19,6 +21,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,8 +37,11 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
 
     private Button getinfo;
     private TextView setinfo;
-
     private String bssid=null;
+
+
+    private ImageButton btn1;
+    private ImageButton btn2;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,17 +54,29 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        getinfo=getView().findViewById(R.id.getWiFiinfo);
-        setinfo=getView().findViewById(R.id.setWiFiinfo);
-        getinfo.setOnClickListener(this);
+//        getinfo=getView().findViewById(R.id.getWiFiinfo);
+//        setinfo=getView().findViewById(R.id.setWiFiinfo);
+//        getinfo.setOnClickListener(this);
+            btn1=getView().findViewById(R.id.btn_qiandao);
+             btn2=getView().findViewById(R.id.btn_faqi);
+             btn1.setOnClickListener(this);
+             btn2.setOnClickListener(this);
 
     }
+
+
     @Override
     public void onClick(View v){
         switch (v.getId()) {
             case R.id.getWiFiinfo:
                 getWiFiMAC();
                 setinfo.setText("ip " + getWifiIp() + " " + getWiFiName() + " "+bssid);
+                break;
+            case R.id.btn_qiandao:
+                signinpage.actionStart(getActivity());
+                break;
+            case R.id.btn_faqi:
+                signinpage.actionStart(getActivity());
                 break;
             default:
                 break;
